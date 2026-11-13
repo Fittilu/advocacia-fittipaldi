@@ -6,5 +6,5 @@ window.SITE = {
   whatsapp: "5511997272525",   // somente números com DDI+DDD, ex.: "5511999999999" (ativa o botão flutuante)
   whatsappMessage: "Olá, vim pelo site da Advocacia Fittipaldi e gostaria de conversar.",
   address: "",    // ex.: "Av. Exemplo, 100 — São Paulo/SP"
-  oab: ""         // ex.: "OAB/SP nº 000.000"
+  oab: "OAB/SP nº 128.999"         // ex.: "OAB/SP nº 000.000"
 };
