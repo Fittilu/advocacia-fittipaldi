@@ -27,4 +27,6 @@ O anteprojeto de reforma do Código Civil traz propostas para modernizar e desbu
 
 Como essas inovações ainda dependem da aprovação final do novo Código Civil, o procedimento atual permanece: havendo testamento, o primeiro passo após o óbito é a ação de abertura, registro e cumprimento de testamento antes de iniciar o inventário.
 
+*Observação: o anteprojeto de reforma do Código Civil ainda estava em tramitação quando o vídeo foi gravado. Vale confirmar a situação atual antes de tomar decisões.*
+
 Mais conteúdos como este estão no [canal Direito Descomplicado, no YouTube](https://www.youtube.com/@direitodescomplicadofittipaldi).
