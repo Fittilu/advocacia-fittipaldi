@@ -18,3 +18,6 @@ Site estático (HTML/CSS/JS, sem build), pronto para GitHub Pages.
 5. Quando o DNS propagar, marque **Enforce HTTPS** em Settings → Pages.
 
 Confira os IPs na documentação atual do GitHub Pages antes de configurar.
+
+## Endereço provisório
+https://fittilu.github.io/advocacia-fittipaldi/
