@@ -21,6 +21,7 @@
   if (waLink) {
     var wa = doc.getElementById('wa-float');
     wa.href = waLink; wa.hidden = false;
+    doc.querySelectorAll('[data-wa]').forEach(function (a) { a.href = waLink; a.hidden = false; });
   }
   fill('address', S.address);
   if (any) doc.getElementById('contact-empty').hidden = true;

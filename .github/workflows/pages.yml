@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Versionar arquivos (evita cache antigo)
-        run: sed -i "s/__VERSION__/${GITHUB_SHA::7}/g" index.html
+        run: find . -name "*.html" -not -path "./.git/*" -exec sed -i "s/__VERSION__/${GITHUB_SHA::7}/g" {} +
       - uses: actions/configure-pages@v5
         with:
           enablement: true
