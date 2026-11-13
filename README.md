@@ -21,3 +21,17 @@ Confira os IPs na documentação atual do GitHub Pages antes de configurar.
 
 ## Endereço provisório
 https://fittilu.github.io/advocacia-fittipaldi/
+
+## SEO — o que já está feito e o que falta
+
+**Já no código (automático a cada `python3 tools/build_blog.py`):** título e descrição por página, canonical, Open Graph/Twitter (miniatura 1200×630), dados estruturados (LegalService, Person, WebSite, BlogPosting, breadcrumbs), sitemap.xml, robots.txt, HTML estático rápido, imagens com dimensões e lazy-load.
+
+**Quando o domínio definitivo estiver no ar:**
+1. Trocar `SITE_URL` em `tools/build_blog.py`, rodar o script, commitar e dar push.
+2. Cadastrar o site no Google Search Console e enviar o `sitemap.xml`; fazer o mesmo no Bing Webmaster Tools.
+3. Criar/reivindicar o Perfil da Empresa no Google (precisa do endereço do escritório) — é o que mais pesa em buscas locais como "advogado em São Paulo".
+4. Preencher `address` e telefone fixo em `assets/config.js` e no JSON-LD.
+5. Link do site no canal do YouTube, no Instagram, na página da OAB-SP e em diretórios jurídicos sérios.
+6. Continuar publicando 1 artigo por vídeo (já é a principal fonte de tráfego orgânico).
+
+**Limite ético:** o Código de Ética da OAB e o Provimento 205/2021 proíbem promessas, "melhor advogado", comparações e captação agressiva. O SEO aqui é de conteúdo informativo.

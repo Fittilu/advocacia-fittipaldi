@@ -1,5 +1,5 @@
 ---
-titulo: Como reduzir os custos e transtornos do inventário com planejamento e holding familiar
+titulo: Como reduzir custos do inventário com holding familiar
 descricao: O inventário é demorado e caro. Entenda como o planejamento patrimonial e a holding familiar podem organizar a sucessão em vida, respeitando a legítima.
 data: 2026-11-13
 autor: Luiz Fittipaldi

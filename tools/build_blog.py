@@ -45,6 +45,49 @@ def load():
         posts.append(meta)
     return sorted(posts, key=lambda p: p["data"], reverse=True)
 
+HOME_TITLE = "Advocacia Fittipaldi | Planejamento Sucessório em São Paulo"
+HOME_DESC = "Advocacia em São Paulo com mais de 30 anos de experiência em planejamento sucessório, holding familiar, direito imobiliário, societário e tributário."
+
+def seo_home():
+    import json
+    u = SITE_URL + "/"
+    graph = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebSite", "@id": u + "#website", "url": u, "name": "Advocacia Fittipaldi", "inLanguage": "pt-BR"},
+        {"@type": "LegalService", "@id": u + "#escritorio", "name": "Advocacia Fittipaldi", "url": u,
+         "slogan": "Assessoria Jurídica Estratégica", "description": HOME_DESC,
+         "logo": SITE_URL + "/assets/logo.png", "image": SITE_URL + "/assets/og.jpg",
+         "email": "luiz.fittipaldi@outlook.com.br", "telephone": "+5511997272525",
+         "areaServed": [{"@type": "State", "name": "São Paulo"}, {"@type": "Country", "name": "Brasil"}],
+         "availableLanguage": "pt-BR",
+         "sameAs": ["https://www.youtube.com/@direitodescomplicadofittipaldi"],
+         "knowsAbout": ["Planejamento sucessório", "Holding familiar", "Inventário e testamento", "Direito Imobiliário", "Direito Societário e Contratual", "Direito Tributário"],
+         "founder": {"@id": u + "#fundador"}},
+        {"@type": "Person", "@id": u + "#fundador", "name": "Luiz Manuel Fittipaldi Ramos de Oliveira", "jobTitle": "Advogado",
+         "identifier": "OAB/SP 128.999", "image": SITE_URL + "/assets/fundador.jpg", "worksFor": {"@id": u + "#escritorio"}}]}
+    t, d = html.escape(HOME_TITLE), html.escape(HOME_DESC, quote=True)
+    return f'''<!-- SEO:START -->
+  <title>{t}</title>
+  <meta name="description" content="{d}">
+  <meta name="theme-color" content="#13244a">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="{u}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Advocacia Fittipaldi">
+  <meta property="og:title" content="{t}">
+  <meta property="og:description" content="{d}">
+  <meta property="og:url" content="{u}">
+  <meta property="og:image" content="{SITE_URL}/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Advocacia Fittipaldi — Assessoria Jurídica Estratégica">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{t}">
+  <meta name="twitter:description" content="{d}">
+  <meta name="twitter:image" content="{SITE_URL}/assets/og.jpg">
+  <script type="application/ld+json">{json.dumps(graph, ensure_ascii=False)}</script>
+  <!-- SEO:END -->'''
+
 def head(title, desc, canon, root, extra=""):
     t, d = html.escape(title), html.escape(desc, quote=True)
     return f'''<!doctype html>
@@ -62,7 +105,15 @@ def head(title, desc, canon, root, extra=""):
   <meta property="og:description" content="{d}">
   <meta property="og:url" content="{canon}">
   <meta property="og:image" content="{SITE_URL}/assets/og.jpg">
+  <meta property="og:site_name" content="Advocacia Fittipaldi">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Advocacia Fittipaldi — Assessoria Jurídica Estratégica">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{t}">
+  <meta name="twitter:description" content="{d}">
+  <meta name="twitter:image" content="{SITE_URL}/assets/og.jpg">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="icon" href="{root}favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" href="{root}assets/favicon-512.png">
   <link rel="apple-touch-icon" href="{root}assets/apple-touch-icon.png">
@@ -188,6 +239,7 @@ def build():
     </section>
     <!-- BLOG:END -->'''
     idx = re.sub(r"<!-- BLOG:START -->.*?<!-- BLOG:END -->", lambda m: teaser, idx, flags=re.S)
+    idx = re.sub(r"<!-- SEO:START -->.*?<!-- SEO:END -->", lambda m: seo_home(), idx, flags=re.S)
     (ROOT / "index.html").write_text(idx, encoding="utf-8")
     # sitemap + robots
     hoje = datetime.date.today().isoformat()
