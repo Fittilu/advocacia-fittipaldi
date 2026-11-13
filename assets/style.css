@@ -1,15 +1,15 @@
 :root {
-  --navy: #13244a;
-  --navy-deep: #0b1833;
+  --navy: #14284b;
+  --navy-deep: #0e1d38;
   --navy-soft: #1c3366;
-  --gold: #c9a45c;
-  --gold-deep: #8a6a2b;
+  --gold: #b8924f;
+  --gold-deep: #94702f;
   --ink: #1c2437;
-  --muted: #5a6478;
-  --paper: #fbfaf7;
+  --muted: #4a5568;
+  --paper: #f7f4ee;
   --line: #e6e1d6;
-  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
   --wrap: 1120px;
 }
 
