@@ -187,3 +187,18 @@ h2 em { color: var(--gold-deep); }
   .areas-list .a-desc { grid-column: 2; }
   .facts { gap: 14px 28px; }
 }
+
+/* WhatsApp */
+.wa-float {
+  position: fixed; z-index: 60; right: max(20px, env(safe-area-inset-right, 0px)); bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  display: inline-flex; align-items: center; gap: 10px; background: #1fa855; color: #fff; text-decoration: none;
+  font-weight: 600; font-size: 16px; padding: 14px 20px 14px 16px; border-radius: 999px;
+  box-shadow: 0 10px 28px -8px rgba(11, 24, 51, .55); transition: transform .2s, background .2s;
+}
+.wa-float:hover { background: #178a45; transform: translateY(-2px); }
+.wa-float[hidden] { display: none; }
+.wa-float svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+@media (max-width: 560px) {
+  .wa-float { padding: 15px; }
+  .wa-float span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}

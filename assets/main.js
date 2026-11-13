@@ -14,7 +14,13 @@
   }
   fill('email', S.email, 'mailto:' + S.email);
   fill('phone', S.phone, 'tel:+' + String(S.phone || '').replace(/\D/g, '').replace(/^(?!55)/, '55'));
-  fill('whatsapp', S.whatsapp && ('+' + S.whatsapp.replace(/\D/g, '')), 'https://wa.me/' + String(S.whatsapp || '').replace(/\D/g, ''));
+  var waDigits = String(S.whatsapp || '').replace(/\D/g, '');
+  var waLink = waDigits ? 'https://wa.me/' + waDigits + (S.whatsappMessage ? '?text=' + encodeURIComponent(S.whatsappMessage) : '') : '';
+  fill('whatsapp', waDigits && ('+' + waDigits), waLink);
+  if (waLink) {
+    var wa = doc.getElementById('wa-float');
+    wa.href = waLink; wa.hidden = false;
+  }
   fill('address', S.address);
   if (any) doc.getElementById('contact-empty').hidden = true;
   if (S.oab) { var o = doc.getElementById('oab'); o.textContent = S.oab; o.hidden = false; }
