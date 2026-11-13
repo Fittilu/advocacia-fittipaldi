@@ -253,3 +253,16 @@ h2 em { color: var(--gold-deep); }
 .post-cta .btn-outline:hover { background: rgba(255, 255, 255, .1); border-color: var(--gold); }
 .post-cta [hidden] { display: none; }
 .back a { font-weight: 600; text-decoration: none; }
+
+/* Contato: cartão */
+#contato h2 { text-wrap: balance; }
+.contact-card { background: rgba(255,255,255,.04); border: 1px solid rgba(201,164,92,.4); border-top: 3px solid var(--gold); padding: 36px 40px; }
+.contact-card-title { margin: 0 0 20px; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.contact-cta { display: block; text-align: center; width: 100%; margin-bottom: 8px; }
+.contact-cta[hidden] { display: none; }
+.contact-card .contact-list { border-top: 0; }
+.contact-card .contact-list li { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+.contact-card .contact-list li:last-child { border-bottom: 0; }
+.contact-card .contact-list a, .contact-card .contact-list address { font-size: 18px; }
+.contact-note { margin: 20px 0 0; font-size: 14px; color: rgba(255,255,255,.65); }
+@media (max-width: 600px) { .contact-card { padding: 28px 22px; } }
