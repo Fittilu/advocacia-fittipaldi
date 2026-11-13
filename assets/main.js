@@ -16,7 +16,8 @@
   fill('phone', S.phone, 'tel:+' + String(S.phone || '').replace(/\D/g, '').replace(/^(?!55)/, '55'));
   var waDigits = String(S.whatsapp || '').replace(/\D/g, '');
   var waLink = waDigits ? 'https://wa.me/' + waDigits + (S.whatsappMessage ? '?text=' + encodeURIComponent(S.whatsappMessage) : '') : '';
-  fill('whatsapp', waDigits && ('+' + waDigits), waLink);
+  var waShown = /^55\d{2}9\d{8}$/.test(waDigits) ? waDigits.replace(/^(55)(\d{2})(\d{5})(\d{4})$/, '+$1 $2 $3-$4') : '+' + waDigits;
+  fill('whatsapp', waDigits && waShown, waLink);
   if (waLink) {
     var wa = doc.getElementById('wa-float');
     wa.href = waLink; wa.hidden = false;
@@ -41,6 +42,17 @@
   var header = doc.querySelector('.site-header');
   function onScroll() { header.classList.toggle('scrolled', window.scrollY > 8); }
   onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Player do YouTube (só carrega ao clicar)
+  var pl = doc.getElementById('player');
+  if (pl) pl.querySelector('.player-btn').addEventListener('click', function () {
+    var f = doc.createElement('iframe');
+    f.src = pl.getAttribute('data-src');
+    f.title = 'Vídeos do canal Direito Descomplicado';
+    f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+    f.allowFullscreen = true; f.loading = 'lazy';
+    pl.innerHTML = ''; pl.appendChild(f);
+  });
 
   // Animação de entrada
   var items = doc.querySelectorAll('.reveal');
