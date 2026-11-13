@@ -280,3 +280,16 @@ a, button { -webkit-tap-highlight-color: rgba(184, 146, 79, .25); }
   .wa-float { right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); }
   .site-footer { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* Redes sociais */
+.social { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 14px; padding: 0; }
+.social a { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 0 16px; border: 1px solid rgba(255,255,255,.28); color: #fff; text-decoration: none; font-size: 14px; letter-spacing: .04em; transition: border-color .2s, color .2s; }
+.social a[hidden] { display: none; }
+.social a:hover { border-color: var(--gold); color: var(--gold); }
+.social svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
+.social svg.line { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.social svg .dot { fill: currentColor; stroke: none; }
+.social svg .cut { fill: var(--navy-deep); }
+.contact-card .contact-mail { margin-bottom: 8px; }
+.contact-card .contact-cta.btn-ghost { background: transparent; }
+@media (max-width: 560px) { .site-footer .social a { padding: 0 14px; } }

@@ -24,6 +24,12 @@
     doc.querySelectorAll('[data-wa]').forEach(function (a) { a.href = waLink; a.hidden = false; });
   }
   fill('address', S.address);
+  var ig = doc.querySelector('[data-ig]');
+  if (ig && /^https?:\/\//.test(S.instagram || '')) { ig.href = S.instagram; ig.hidden = false; }
+  var ml = doc.querySelector('[data-mail]');
+  if (ml && S.email) { ml.href = 'mailto:' + S.email; ml.hidden = false; }
+  var cm = doc.querySelector('[data-mail-btn]');
+  if (cm && S.email) { cm.href = 'mailto:' + S.email; cm.hidden = false; }
   if (any) doc.getElementById('contact-empty').hidden = true;
   if (S.oab) { var o = doc.getElementById('oab'); o.textContent = S.oab; o.hidden = false; }
   doc.getElementById('ano').textContent = new Date().getFullYear();
