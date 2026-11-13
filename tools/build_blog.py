@@ -20,6 +20,7 @@ def inline(t):
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
     t = re.sub(r"\*(.+?)\*", r"<em>\1</em>", t)
     t = re.sub(r"\[(.+?)\]\((https?://[^)\s]+)\)", r'<a href="\2" target="_blank" rel="noopener">\1</a>', t)
+    t = re.sub(r"\[(.+?)\]\((\.\./[^)\s]+)\)", r'<a href="\2">\1</a>', t)  # link interno
     return t
 
 def md(body):
