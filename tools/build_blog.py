@@ -204,7 +204,7 @@ def build():
         <aside class="post-cta">
           <p>Quer conversar sobre o tema?</p>
           <a class="btn" href="#" data-wa hidden target="_blank" rel="noopener">Fale pelo WhatsApp</a>
-          <a class="btn btn-outline" href="{root}#contato">Contato do escritório</a>
+          <a class="btn" href="{root}#contato">Entrar em contato</a>
         </aside>
         <p class="back"><a href="{root}blog/">← Todos os artigos</a></p>
       </div>

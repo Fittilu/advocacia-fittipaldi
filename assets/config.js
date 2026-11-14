@@ -3,7 +3,7 @@
 window.SITE = {
   email: "luiz.fittipaldi@outlook.com.br", // ex.: "contato@seudominio.com.br"
   phone: "",      // ex.: "(11) 3000-0000"
-  whatsapp: "5511997272525",   // somente números com DDI+DDD, ex.: "5511999999999" (ativa o botão flutuante)
+  whatsapp: "",   // desativado a pedido (número: 5511997272525) — somente números com DDI+DDD, ex.: "5511999999999" (ativa o botão flutuante)
   whatsappMessage: "Olá, vim pelo site da Advocacia Fittipaldi e gostaria de conversar.",
   instagram: "https://www.instagram.com/luizfittipaldioliveira/",  // ex.: "https://www.instagram.com/usuario/" (aparece no rodapé quando preenchido)
   address: "Av. Washington Luís, 524, Sala 2 — Santo Amaro, São Paulo/SP",    // ex.: "Av. Exemplo, 100 — São Paulo/SP"
