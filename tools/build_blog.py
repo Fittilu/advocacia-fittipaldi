@@ -57,6 +57,8 @@ def seo_home():
          "slogan": "Assessoria Jurídica Estratégica", "description": HOME_DESC,
          "logo": SITE_URL + "/assets/logo.png", "image": SITE_URL + "/assets/og.jpg",
          "email": "luiz.fittipaldi@outlook.com.br", "telephone": "+5511997272525",
+         "address": {"@type": "PostalAddress", "streetAddress": "Av. Washington Luís, 524 - Sala 2",
+                     "addressLocality": "São Paulo", "addressRegion": "SP", "postalCode": "04662-000", "addressCountry": "BR"},
          "areaServed": [{"@type": "State", "name": "São Paulo"}, {"@type": "Country", "name": "Brasil"}],
          "availableLanguage": "pt-BR",
          "sameAs": ["https://www.youtube.com/@direitodescomplicadofittipaldi", "https://www.instagram.com/luizfittipaldioliveira/"],
