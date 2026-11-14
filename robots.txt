@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fittilu.github.io/advocacia-fittipaldi/sitemap.xml
+Sitemap: https://www.advocaciafittipaldi.com.br/sitemap.xml

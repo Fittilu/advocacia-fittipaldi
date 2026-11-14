@@ -20,7 +20,7 @@ Site estático (HTML/CSS/JS, sem build), pronto para GitHub Pages.
 Confira os IPs na documentação atual do GitHub Pages antes de configurar.
 
 ## Endereço provisório
-https://fittilu.github.io/advocacia-fittipaldi/
+https://www.advocaciafittipaldi.com.br/
 
 ## SEO — o que já está feito e o que falta
 

@@ -7,7 +7,7 @@ Quando o domínio definitivo estiver no ar, altere SITE_URL abaixo e rode de nov
 """
 import html, re, pathlib, datetime
 
-SITE_URL = "https://fittilu.github.io/advocacia-fittipaldi"   # sem barra no final
+SITE_URL = "https://www.advocaciafittipaldi.com.br"   # sem barra no final
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
 
